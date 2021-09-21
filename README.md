@@ -1,0 +1,1 @@
+# my-money-bad-java-gradle
