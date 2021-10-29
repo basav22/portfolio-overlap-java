@@ -1,3 +1,30 @@
+# What is this
+This uses external API to calculate **Portfolio Overlap** with given new fund on your existing fund.
+
+Refer to details of Input/ Output in **Geektrust Coding Chanllenge** [here](https://www.geektrust.in/coding-problem/backend/portfolio-overlap)
+
+Sample Input - 
+```
+CURRENT_PORTFOLIO AXIS_BLUECHIP ICICI_PRU_BLUECHIP UTI_NIFTY_INDEX  -> Command to Set CURRENT_PORTFOLIO
+CALCULATE_OVERLAP MIRAE_ASSET_EMERGING_BLUECHIP -> Command to Calculate Overlap with below formula
+ADD_STOCK AXIS_BLUECHIP TCS -> Command to ADD stock to Mutual Fund as rebalancing
+```
+Output
+```
+
+ICICI_PRU_NIFTY_NEXT_50_INDEX UTI_NIFTY_INDEX 20.37%
+ICICI_PRU_NIFTY_NEXT_50_INDEX AXIS_MIDCAP 14.81%
+ICICI_PRU_NIFTY_NEXT_50_INDEX PARAG_PARIKH_FLEXI_CAP 7.41%
+FUND_NOT_FOUND
+ICICI_PRU_NIFTY_NEXT_50_INDEX UTI_NIFTY_INDEX 20.37%
+ICICI_PRU_NIFTY_NEXT_50_INDEX AXIS_MIDCAP 14.68%
+ICICI_PRU_NIFTY_NEXT_50_INDEX PARAG_PARIKH_FLEXI_CAP 7.32%
+
+```
+
+# Formula 
+
+`Overlap (A,B) = 2*(No of common stocks in A & B)/ (No of stocks in A + No of stocks in B) * 100`
 
 # Pre-requisites
 * Java 1.8/1.11/1.15
