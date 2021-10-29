@@ -5,8 +5,8 @@ plugins {
 
 group = 'com.example'
 version = '1.0'
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
+sourceCompatibility = 1.11
+targetCompatibility = 1.11
 
 jacoco { //Please do not change this
     toolVersion = "0.8.4"
@@ -38,6 +38,17 @@ jar {
     }
 }
 
+repositories {
+    mavenCentral()
+}
+
+//Add your dependencies here
+dependencies {
+    compile('com.fasterxml.jackson.core:jackson-databind:2.0.1')
+
+    testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version:'5.2.0'
+}
+
 test { ///Please do not change this
     useJUnitPlatform()
     testLogging {
@@ -55,11 +66,3 @@ test { ///Please do not change this
 }
 
 
-repositories {
-     mavenCentral()
-}
-
-//Add your dependencies here
-dependencies {
-    testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version:'5.2.0'
-}
